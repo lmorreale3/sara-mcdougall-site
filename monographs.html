@@ -3,31 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | Sara McDougall</title>
+    <title>Publications | Sara McDougall</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         :root { --primary: #b0c4de; --dark-text: #2c3e50; --accent: #8e735b; --bg: #ffffff; --light-grey: #f9f9f9; }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: 'Lato', sans-serif; line-height: 1.6; color: var(--dark-text); background-color: var(--bg); display: flex; }
-        
-        /* Sidebar Navigation */
         nav { width: 280px; height: 100vh; background: var(--primary); color: var(--dark-text); position: fixed; padding: 2rem; display: flex; flex-direction: column; border-right: 1px solid rgba(0,0,0,0.1); }
         .headshot-container { width: 150px; height: 150px; border-radius: 50%; overflow: hidden; margin-bottom: 1.5rem; border: 3px solid white; flex-shrink: 0; }
         .headshot-container img { width: 100%; height: 100%; object-fit: cover; }
         nav h1 a { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--dark-text); text-decoration: none; line-height: 1.2; }
         nav a { color: var(--dark-text); text-decoration: none; margin-top: 1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; font-size: 0.85rem; transition: 0.3s; opacity: 0.7; }
         nav a:hover, nav a.active { opacity: 1; padding-left: 5px; border-left: 3px solid white; }
-        
-        /* Main Content */
         main { margin-left: 280px; padding: 4rem; max-width: 1100px; width: 100%; }
         .page-header-accent { width: 100%; height: 8px; background: var(--primary); margin-bottom: 2rem; border-radius: 4px; }
-        h2 { font-family: 'Playfair Display', serif; font-size: 2.2rem; color: var(--dark-text); margin-bottom: 1.5rem; border-bottom: 2px solid var(--primary); display: inline-block; }
-        
+        h2 { font-family: 'Playfair Display', serif; font-size: 2.2rem; color: var(--dark-text); margin-bottom: 0.2rem; border-bottom: 2px solid var(--primary); display: inline-block; }
+        .back-btn { display: block; text-decoration: none; color: var(--accent); font-size: 0.8rem; font-weight: bold; margin-bottom: 2.5rem; text-transform: uppercase; letter-spacing: 0.5px; }
+        .back-btn:hover { text-decoration: underline; }
+        .book-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; margin-top: 1rem; }
+        .book-card { background: var(--light-grey); padding: 1rem; text-align: center; border: 1px solid #eee; }
+        .book-card img { width: 100%; height: auto; max-height: 320px; object-fit: contain; margin-bottom: 1rem; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
         @media (max-width: 768px) { body { flex-direction: column; } nav { width: 100%; height: auto; position: relative; padding: 1.5rem; } main { margin-left: 0; padding: 2rem; } }
     </style>
 </head>
 <body>
-
 <nav>
     <div class="headshot-container">
         <img src="mcdhead2019.jpg" alt="Sara McDougall">
@@ -41,29 +40,35 @@
 </nav>
 <main>
     <div class="page-header-accent"></div>
-    
-    <section id="about">
-    <h2>Historian of Gender & Law</h2>
-    <p style="font-size: 1.25rem; font-weight: 300; margin-bottom: 1.5rem; color: #555;">
-        I am a historian of the Middle Ages specializing in the intersections of gender, law, and justice. 
-        I am a <strong>Professor, Department of Global History</strong> at John Jay College of Criminal Justice and the CUNY Graduate Center.
-    </p>
-    
-    <p style="margin-bottom: 1.5rem;">
-        My research investigates how individuals—particularly women and marginalized groups—navigated the legal and religious structures of Medieval France. 
-        From the <strong>criminalization of childbirth and infanticide</strong> to the complexities of "illegitimacy" and bigamy, my work seeks to uncover the human stories and lived experiences hidden within archival legal records.
-    </p>
-
-    <p style="margin-bottom: 1.5rem;">
-        In addition to my research, I am committed to public-facing scholarship and digital humanities. I serve as a co-director for 
-        <strong>Middle Ages for Educators</strong> and have served as the <strong>Medieval Studies Coordinator</strong> at the CUNY Graduate Center since 2020.
-    </p>
-    
-    <p>
-        For inquiries regarding research, media, or academic collaboration, please refer to the <a href="affiliations.html" style="color:var(--accent); text-decoration:none; font-weight:bold;">Affiliations</a> page.
-    </p>
-</section>
+    <h2>Monographs</h2>
+    <a href="index.html" class="back-btn">← Back to Home</a>
+    <div class="book-grid">
+        <div class="book-card">
+            <img src="9780691268910.avif" alt="Justice for Jehanne">
+            <h3>Justice for Jehanne</h3>
+            <p>Princeton University Press (2024)</p>
+        </div>
+        <div class="book-card">
+            <img src="51JIecsTuDL._SY445_SX342_FMwebp_.webp" alt="Royal Bastards">
+            <h3>Royal Bastards</h3>
+            <p>Oxford University Press (2017)</p>
+        </div>
+        <div class="book-card">
+            <img src="bigamy-book.jpg" alt="Bigamy and Christian Identity">
+            <h3>Bigamy and Christian Identity</h3>
+            <p>University of Pennsylvania Press (2012)</p>
+        </div>
+    </div>
+    <section style="margin-top: 4rem;">
+        <h2>Edited Volumes</h2>
+        <div class="book-grid" style="grid-template-columns: 1fr 2fr;">
+            <div class="book-card"><img src="9781472584847.jpg" alt="Global History of Crime"></div>
+            <div style="display: flex; flex-direction: column; justify-content: center; text-align: left;">
+                <h3>A Global History of Crime and Punishment</h3>
+                <p><strong>General Editor</strong> | Bloomsbury (2023)</p>
+            </div>
+        </div>
+    </section>
 </main>
-
 </body>
 </html>

@@ -175,3 +175,89 @@ h2 {
     color: var(--accent);
     text-decoration: underline;
 }
+/* --- Media Page Alternating Logos --- */
+
+/* Basic layout for each media group */
+.news-item {
+    display: flex;
+    align-items: flex-start; /* Aligns the top of the image and top of the title */
+    gap: 3rem;               /* Space between text and image */
+    margin-bottom: 4rem;     /* Space between publication blocks */
+    width: 100%;
+}
+
+/* Container for the text block (h3 and p links) */
+.text-content {
+    flex: 1; /* Makes the text box take up all remaining space */
+}
+
+/* Subheading Styling */
+.news-item h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    color: var(--dark-text);
+    margin-bottom: 1.2rem;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    display: inline-block;
+    padding-bottom: 0.3rem;
+    padding-right: 2rem;
+}
+
+/* Link Styling */
+.news-item p {
+    margin-bottom: 0.6rem;
+}
+
+.news-item a {
+    color: var(--dark-text);
+    text-decoration: none;
+    transition: 0.2s;
+    line-height: 1.4;
+}
+
+.news-item a:hover {
+    color: var(--accent);
+    text-decoration: underline;
+}
+
+/* THE LOGO IMAGE CONTROL */
+.publication-logo {
+    flex-shrink: 0;         /* Prevents the image from being squished */
+    width: auto;             /* Let width adjust to height */
+    height: 120px;           /* Makes all logos roughly the same vertical size */
+    max-width: 200px;        /* Keeps horizontal logos like Washington Post in check */
+    object-fit: contain;     /* Ensures whole logo is visible without cropping */
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.05)); /* Optional soft shadow for polish */
+}
+
+/* Adjustments for the specific logos based on their visual content */
+
+/* Slate logo (image_0.png) is solid and bold; needs slightly less height */
+.logo-right img[src*="slate"] {
+    height: 100px;
+}
+
+/* Ms. Magazine logo (image_1.png) is a square shape */
+.logo-left img[src*="ms-magazine"] {
+    height: 130px; /* Slightly taller because it's square */
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 900px) {
+    .news-item {
+        flex-direction: column !important; /* Stack text above image on small screens */
+        align-items: center;
+        text-align: center;
+        gap: 1.5rem;
+    }
+    
+    .news-item h3 {
+        padding-right: 0;
+    }
+    
+    /* Make logos slightly smaller on mobile */
+    .publication-logo {
+        height: 80px !important;
+        margin-top: 1rem;
+    }
+}

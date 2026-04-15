@@ -260,4 +260,13 @@ h2 {
         height: 80px !important;
         margin-top: 1rem;
     }
+}/* Keep linked book titles dark unless hovered */
+.book-card h3 a {
+    text-decoration: none;
+    color: var(--dark-text);
+}
+
+.book-card h3 a:hover {
+    color: var(--accent); /* Changes color slightly when mouse is over it */
+    text-decoration: underline;
 }

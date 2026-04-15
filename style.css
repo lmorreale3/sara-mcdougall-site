@@ -116,3 +116,32 @@ h2 {
     nav { width: 100%; height: auto; position: relative; padding: 1.5rem; } 
     main { margin-left: 0; padding: 2rem; } 
 }
+/* --- Publication Grid Styles --- */
+
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns */
+    gap: 2rem;                             /* Spacing between books */
+    margin-top: 2rem;
+    align-items: start;
+}
+
+.book-card {
+    text-align: center; 
+}
+
+.book-card img {
+    width: 100%;       
+    max-width: 200px;  /* Keeps the book covers a reasonable size */
+    height: auto;      
+    display: block;
+    margin: 0 auto 1rem auto; /* Centers the image inside the column */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+}
+
+/* Mobile fix: stacks them on small screens */
+@media (max-width: 600px) {
+    .book-grid {
+        grid-template-columns: 1fr;
+    }
+}

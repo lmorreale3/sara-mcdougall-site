@@ -14,7 +14,10 @@
         nav { width: 280px; height: 100vh; background: var(--primary); color: var(--dark-text); position: fixed; padding: 2rem; display: flex; flex-direction: column; border-right: 1px solid rgba(0,0,0,0.1); }
         .headshot-container { width: 150px; height: 150px; border-radius: 50%; overflow: hidden; margin-bottom: 1.5rem; border: 3px solid white; flex-shrink: 0; }
         .headshot-container img { width: 100%; height: 100%; object-fit: cover; }
-        nav h1 a { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--dark-text); text-decoration: none; line-height: 1.2; }
+        
+        /* This ensures the title link looks like text and wraps nicely */
+        nav h1 a { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--dark-text); text-decoration: none; line-height: 1.2; display: block; margin-bottom: 1rem; }
+        
         nav a { color: var(--dark-text); text-decoration: none; margin-top: 1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; font-size: 0.85rem; transition: 0.3s; opacity: 0.7; }
         nav a:hover, nav a.active { opacity: 1; padding-left: 5px; border-left: 3px solid white; }
         
@@ -33,20 +36,23 @@
         <img src="mcdhead2019.jpg" alt="Sara McDougall">
     </div>
     <h1><a href="index.html">Sara McDougall, Historian & Author</a></h1>
-    <a href="index.html">About</a>
+    
+    <a href="index.html" class="active">About</a>
     <a href="monographs.html">Monographs & Edited Volumes</a>
     <a href="media.html">Media & News</a>
     <a href="affiliations.html">Affiliations</a>
     <a href="events.html">Upcoming Events</a>
 </nav>
+
 <main>
     <div class="page-header-accent"></div>
     
     <section id="about">
-    <h2>Historian of Gender & Law</h2>
-    <p style="font-size: 1.25rem; font-weight: 300; margin-bottom: 1.5rem; color: #555;">
-        Sara McDougall is Professor of History at John Jay College of the City University of New York and on the faculty of Biography and Memoir, French, History, and Medieval Studies at the CUNY Graduate Center. She writes about gender and justice in the Middle Ages, with a focus on women's encounters with legal and religious ideas in the society and culture of medieval France.</p>
-</section>
+        <h2>Historian of Gender & Law</h2>
+        <p style="font-size: 1.25rem; font-weight: 300; margin-bottom: 1.5rem; color: #555;">
+            Sara McDougall is Professor of History at John Jay College of the City University of New York and on the faculty of Biography and Memoir, French, History, and Medieval Studies at the CUNY Graduate Center. She writes about gender and justice in the Middle Ages, with a focus on women's encounters with legal and religious ideas in the society and culture of medieval France.
+        </p>
+    </section>
 </main>
 
 </body>
